@@ -8,12 +8,6 @@ library(dplyr)
 source("ETHAN_RSHAH_loading_cleaning_validation.R")
 
 ##-----
-## Cutting distance into bins and transforming price into multiples of one million
-redfin_data <- redfin_data %>%
-  mutate(dist_bin = round(dist, digits = 1),
-         new_price = PRICE / 1000000)
-
-##-----
 ## Plotting property price vs. distance from nearest Metro station
 # This plot shows the relationship between property prices and the distance from the
 # nearest Metro station for properties sold in the Washington Metropolitan Area in the
